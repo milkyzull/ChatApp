@@ -1,0 +1,75 @@
+<ion-content [fullscreen]="true">
+
+  <div class="logo" > 
+    <img src="/assets/Anak2U.png">
+  </div>
+
+  <div>
+    <form [formGroup]="form">
+      <ion-list lines="none" class="ion-margin ion-padding ion-text-center">
+  
+        <ion-item class="ion-margin-vertical">
+          <ion-input 
+            formControlName="email" 
+            placeholder="Email...">
+          </ion-input>
+        </ion-item>
+  
+        <ion-text *ngIf="!form.get('email').valid && form.get('email').touched">
+          <p class="error">
+            *Please enter a valid email address
+          </p>
+        </ion-text>
+  
+        <ion-item class="ion-margin-vertical">
+          <ion-icon 
+            (click)="onChange()" 
+            slot="right">
+          </ion-icon>
+          <ion-input 
+            formControlName="password" 
+            [type]="isTypePassword ? 'password' : 'text'"
+            placeholder="Password...">
+          </ion-input>
+        </ion-item>
+  
+        <ion-text *ngIf="!form.get('password').valid && form.get('password').touched">
+          <p class="error" *ngIf="form.get('password').invalid && form.get('password').errors['required']">
+            *Please enter your password
+          </p>
+          <p class="error" *ngIf="form.get('password').dirty">
+            *Please enter a valid password
+          </p>
+        </ion-text>
+  
+        <ion-button
+          shape="round" 
+          class="button-color" 
+          *ngIf="!isLogin"
+          (click)="onSubmit()">
+            Log In
+        </ion-button>
+        <ion-button *ngIf="isLogin">
+          <ion-spinner name="crescent"></ion-spinner>
+        </ion-button>
+  
+        <p class="signup">
+          <ion-note>
+            Not a member yet?
+            <ion-text 
+              color="primary" 
+              routerLink="/login/signup">
+                Sign Up
+            </ion-text>
+          </ion-note>
+        </p>
+  
+      </ion-list>
+    </form>
+  </div>
+
+</ion-content>
+
+<footer>
+  Anak2U Chat App (1.0.0)
+</footer>

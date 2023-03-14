@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "chatapp-14ebe": {
+      "hosting": {
+        "app": [
+          "chatapp-14ebe"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "chatapp-14ebe"
+  }
+}

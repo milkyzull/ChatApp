@@ -1,0 +1,38 @@
+ion-header {
+    ion-toolbar {
+        --background: var(--text-primary);
+        ion-buttons {
+            color: var(--primary);
+        }
+        ion-title { 
+            color: var(--white);
+            font-size: 1rem;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+    }
+}
+
+ion-content {
+    ion-list {
+        background: transparent;
+    }
+}
+ion-footer {
+    ion-toolbar {
+        padding: 0 5px;
+        --background: var(--text-primary);
+        ion-textarea {
+            --background: var(--white);
+            border-radius: 20px;
+            margin: 0.2vh 0;
+            font-size: 1rem;
+            color: var(--text-primary);
+            letter-spacing: 0.5px;
+        }
+        ion-fab-button {
+            --background: var(--primary);
+        }
+    }
+}
+

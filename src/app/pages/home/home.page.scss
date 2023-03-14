@@ -1,0 +1,89 @@
+ion-header{
+    ion-toolbar {
+        --background: var(--header);
+        ion-title.title1{
+            letter-spacing: 1px;
+            font-size: 1.7rem !important;
+            color: var(--text-primary);
+            text-align: center;
+            font-weight: bolder;
+        } 
+        ion-button {
+            color: var(--white); 
+        }   
+        ion-title.title2{
+            letter-spacing: 0.5px;
+            font-size: 1.2rem !important;
+            color: var(--white);
+            text-align: left;
+            font-weight: bold;
+        } 
+        ion-icon {
+            color: var(--text-primary);
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    }
+}
+
+ion-content {
+    ion-fab-button {
+        --background: var(--header);
+    }
+    ion-item {
+        width: 95%;
+        margin: auto;
+        padding: 0;
+        --background: var(--text-primary);
+        border: 1px solid;
+    
+        ion-label {
+            font-family: 'sans-serif';
+            color: var(--white);
+            font-size: 1rem;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            padding: 13px;
+        }
+    
+        ion-avatar {
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+    }
+    ion-list-header {
+        --background: var(--white);
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: var(--primary);
+        padding: 5px;
+        margin-left: 3px;
+    }
+    ion-toolbar {
+        .header {
+            --background: var(--header);
+        }
+    }
+}
+ion-label.logout-label {
+    background: white;
+    color: var(--primary);
+    font-family: 'sans-serif';
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    border: 3px solid var(--primary);
+} 
+
+ion-tab-bar {
+    --background: var(--primary);
+    ion-tab-button.tabs {
+        --background: var(--primary);
+        margin-top: 10px;
+        margin-bottom: 8px;
+        ion-icon {
+            color: var(--text-primary);
+            font-size: 1.9rem;
+            font-weight: bold;
+        }
+    }
+}

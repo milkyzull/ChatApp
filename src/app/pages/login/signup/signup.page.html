@@ -1,0 +1,91 @@
+<ion-content [fullscreen]="true">
+
+  <div class="logo">
+    <img src="/assets/Anak2U.png">
+  </div>
+  
+  <div>
+    <form [formGroup]="signupForm">
+      <ion-list lines="none" class="ion-margin ion-padding ion-text-center">
+  
+        <ion-item class="ion-margin-vertical">
+          <ion-input 
+            formControlName="username" 
+            placeholder="Username...">
+          </ion-input>
+        </ion-item>
+  
+        <ion-text *ngIf="!signupForm.get('username').valid && signupForm.get('username').touched">
+          <p class="error">
+            *Please enter a username
+          </p>
+        </ion-text>
+  
+        <ion-item class="ion-margin-vertical">
+          <ion-input 
+            formControlName="email" 
+            placeholder="Email...">
+          </ion-input>
+        </ion-item>
+  
+        <ion-text *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched">
+          <p class="error">
+            *Please enter a valid password
+          </p>
+        </ion-text>
+  
+        <ion-item class="ion-margin-vertical">
+          <ion-icon 
+            (click)="onChange()"
+            slot="right">
+          </ion-icon>
+          <ion-input 
+            formControlName="password" 
+            [type]="isTypePassword ? 'password' : 'text'"
+            placeholder="Password...">
+          </ion-input>
+        </ion-item>
+  
+        <ion-text *ngIf="!signupForm.get('password').valid && signupForm.get('password').touched">
+          <p class="error" *ngIf="signupForm.get('password').invalid && signupForm.get('password').errors['required']">
+            *Please enter your password
+          </p>
+          <p class="error" *ngIf="signupForm.get('password').dirty">
+            *Password must be of atleast 8 characters
+          </p>
+        </ion-text>
+  
+        <ion-button 
+          *ngIf="!isLoading"  
+          class="button-color"
+          shape="round" 
+          (click)="onSubmit()">
+            Sign Up
+        </ion-button>
+        <ion-button 
+          class="loading-button" 
+          shape="round"  
+          *ngIf="isLoading">
+          <ion-spinner name="crescent"></ion-spinner>
+        </ion-button>
+  
+        <p class="signup">
+          <ion-note>
+            Already registered?
+            <ion-text 
+              color="primary" 
+              routerLink="/login">
+                Log In
+            </ion-text>
+          </ion-note>
+        </p>
+  
+      </ion-list>
+    </form>
+  </div>
+
+</ion-content>
+
+<footer>
+  Anak2U Chat App (1.0.0)
+</footer>

@@ -1,0 +1,14 @@
+ion-grid {  
+    transform: translateY(10vh);
+    ion-icon {
+        margin-top: 20%;
+        font-size: 19rem;
+        color: var(--text-primary); 
+    }
+    ion-row {
+        color: var(--text-primary);
+        font-weight: bold;
+        font-size: 1rem;
+    }
+}
+
